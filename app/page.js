@@ -11,7 +11,7 @@ const HomePage = () => {
   useEffect(() => {
     ApiDataClient(`search?&part=snippet&q=${activeSidebar}&maxResults=50`).then(
       (data) => {
-        setVideoItems(data.items);
+        setVideoItems(data?.items);
       }
     );
   }, [activeSidebar]);

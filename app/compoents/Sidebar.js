@@ -6,7 +6,7 @@ const Sidebar = ({ activeSidebar, setActiveSidebar }) => {
     <aside id="sidebar" className="show-sidebar">
       <div className="sidebar-wrapper">
         <div className="sidebar-inner-content">
-          {sidebarData.map((item, index) => {
+          {sidebarData?.map((item, index) => {
             return (
               <div
                 className={

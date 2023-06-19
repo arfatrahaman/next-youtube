@@ -10,8 +10,8 @@ const channelDetails = async ({ params: { channelId } }) => {
   const channelVideos = await ApiData(
     `search?channelId=${channelId}&part=snippet%2Cid&order=date&maxResults=50`
   );
-  const channelStatisticsData = channelData.items[0];
-  const channelAllData = channelVideos.items;
+  const channelStatisticsData = channelData?.items[0];
+  const channelAllData = channelVideos?.items;
 
   return (
     <section id="channel-details">

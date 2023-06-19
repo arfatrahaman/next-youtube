@@ -13,7 +13,7 @@ const VideoCard = ({ videoInfo }) => {
     <div className="video-inner-content">
       {/* Video Detail Linik */}
       <Link href={`/video/${videoId}`} className="video-card">
-        <img src={thumbnails.high.url} alt="" />
+        <img src={thumbnails?.high?.url} alt="" />
         <p className="video-title">{title.slice(0, 80)}....</p>
       </Link>
       {/* Channel Detail Link */}
