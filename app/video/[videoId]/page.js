@@ -15,8 +15,9 @@ const videoId = async ({ params: { videoId } }) => {
     `search?relatedToVideoId=${videoId}&part=snippet&type=video&maxResults=50`
   );
 
-  const videoDetails = videoData.items[0];
-  const videos = relatedVideos.items;
+  const getSingleVideo = videoData?.items ?? [];
+  const videoDetails = getSingleVideo[0];
+  const videos = relatedVideos?.items;
 
   return (
     <section id="video-details">
